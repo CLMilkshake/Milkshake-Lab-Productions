@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* The image used */
-    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.20)), url(images/Backgrounds/coolBackground.png); background-size: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.20)), url(images/Backgrounds/background2.png); background-size: 100%;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -12,12 +12,17 @@ body {
     background-size: cover;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
-    background-color: #26454bb6;
+    background-color: #00537785;
     color: white;
     padding: 30px;
     text-align: center;
 }
+
 
 nav {
     display: flex;
@@ -35,11 +40,13 @@ nav a {
     color: white;
     text-align: center;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 nav a:hover {
-    background-color: #ffffff75;
-    color: black;
+    transition: 0.5s all;
+    background-color: #ffffff98;
+    color: rgb(0, 0, 0);
 }
 
 .parallax image {
@@ -48,11 +55,21 @@ nav a:hover {
 
 .content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content hr{
+    width: 40%;
+    margin-top: -10px;
+    margin-bottom: 50px;
 }
 
 .content h1 {
     text-align: center;
     color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #ffffff;
 }
 
 .grid-container {
@@ -86,6 +103,88 @@ nav a:hover {
     margin-left: -5px;
 }
 
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1259px;
+}
+
+.project-item {
+    background-color: #0000008a;
+    padding: 20px;
+    border: 5px solid rgb(51, 51, 51);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+}
+
+.project-item a:hover{
+    transition: 0.5s all;
+    background-color: rgb(119, 119, 119);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-item h2 {
+    margin-top: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.project-item p {
+    margin-top: -8px;
+    text-decoration: none;
+    color: white;
+}
+
+.disabled-project-item {
+    background-color: #0000008a;
+    padding: 20px;
+    border: 5px solid rgb(51, 51, 51);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    
+}
+
+.disabled-project-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.disabled-project-item h2 {
+    margin-top: 120px;
+}
+
+
+
+.news-item {
+    padding: 20px;
+    margin-top: -100px;
+    text-align: center;
+    width: 100%;
+    
+    display: column;
+    align-items: center;
+    justify-content: center;
+}
+.news-item h2{
+    margin-left: -40px;
+}
+.news-item img{
+    border-radius: 100px;
+    padding-top: 20px;
+    max-width: 100%;
+    margin-left: -30px;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -95,6 +194,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
 
 @media (max-width: 600px) {
     nav {
